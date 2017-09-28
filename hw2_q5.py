@@ -14,10 +14,13 @@ def repeat(f, n):
 	return rfun
 
 x = repeat(f, 1000)([0.5])
+
+# Part A
 print map(lambda x: abs(x - 1) < 0.001, x).index(True)
 
-# plt.title("Graph of f(x) = f(x-1)**f(x-1)")
-# plt.xlabel("x value")
-# plt.ylabel("y value")
-# plt.plot(x)
-# plt.show()
+# Part B
+plt.title("Graph of f(x) = f(x-1)**f(x-1)")
+plt.xlabel("x value")
+plt.ylabel("y value")
+plt.plot(x)
+plt.show()

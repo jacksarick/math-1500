@@ -8,8 +8,10 @@
 -- map f [1..10]
 
 -- Lazy Eval FTW!!!
--- f_r :: Integer -> [Fractional]
+-- f_r :: Double -> [Double]
 f_r r = iterate (\x -> r * x * (1.0 - x)) 0.5
+
+-- f :: [Double]
 f = f_r 1.5
 
-take 10 f
+print $ take 10 f
